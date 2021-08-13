@@ -1,0 +1,156 @@
+{
+  "id": "5a04bb98-c920-4f14-ac70-0c518866c60a",
+  "version": "2.0",
+  "name": "Phone Firmware updator",
+  "url": "https://lakeheadu.my3cx.ca",
+  "tests": [{
+    "id": "b9a13d3c-23bb-454e-8bda-3ccb6aad5197",
+    "name": "Test1",
+    "commands": [{
+      "id": "5a3ab5e7-93b3-4bb3-b6ad-9612414e735b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "37992387-f12e-4476-8676-3f4e5272f436",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1091x727",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4df0880-91a3-4f5b-84e5-84373d607340",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Phones",
+      "targets": [
+        ["linkText=Phones", "linkText"],
+        ["css=.nav:nth-child(1) > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//div[@id='app-container']/div/div/div/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/app/phones')]", "xpath:href"],
+        ["xpath=//nav/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Phones')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e178b7e1-8d51-44f0-a0e3-280646f0f761",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [\"",
+      "targets": [],
+      "value": "ext"
+    }, {
+      "id": "499c28fe-ebbe-4d54-a2b4-2f83f566c042",
+      "comment": "",
+      "command": "forEach",
+      "target": "ext",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "9db7c996-9825-4323-a3cd-4ee12b652cac",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputSearch",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19c4fa7c-adb3-49b4-98a7-4a78000d522f",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=inputSearch",
+      "targets": [],
+      "value": "${i}"
+    }, {
+      "id": "5b0c988c-b7b2-4d03-a2e6-66c00bd67eec",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa15c2ba-6a9d-47fd-9209-5d029da28c45",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-scope > .col-btn > .mc-select > i",
+      "targets": [
+        ["css=.ng-scope > .col-btn > .mc-select > i", "css:finder"],
+        ["xpath=//table[@id='phonesTable']/tbody/tr/td/label/i", "xpath:idRelative"],
+        ["xpath=//td/label/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94a4018f-154c-49a0-9992-71f0c95cbcc3",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnFirmware",
+      "targets": [
+        ["id=btnFirmware", "id"],
+        ["css=#btnFirmware", "css:finder"],
+        ["xpath=//button[@id='btnFirmware']", "xpath:attributes"],
+        ["xpath=//div[@id='app-container']/div[2]/div[2]/phone-list-ctrl/div/div[2]/div/div[2]/div/button[3]", "xpath:idRelative"],
+        ["xpath=//div/button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,' Firmware')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "edba3bc4-5cfd-41ad-9314-0d4117caf3e9",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnOk",
+      "targets": [
+        ["id=btnOk", "id"],
+        ["css=#btnOk", "css:finder"],
+        ["xpath=//button[@id='btnOk']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'OK')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6aa94fb7-2d11-4fe8-9bb2-c2f749119cde",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69d7c6ef-8fba-46d8-adaa-c966291f5267",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnOk",
+      "targets": [
+        ["id=btnOk", "id"],
+        ["css=#btnOk", "css:finder"],
+        ["xpath=//button[@id='btnOk']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'OK')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3f4c9db-ae19-46b0-b76e-1aea19901e4f",
+      "comment": "",
+      "command": "pause",
+      "target": "60000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28321cae-e9d3-447f-8e61-a3ebeef4e837",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "1d328e1b-6261-45e0-96b2-e9d701e1eb54",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b9a13d3c-23bb-454e-8bda-3ccb6aad5197"]
+  }],
+  "urls": ["https://lakeheadu.my3cx.ca/"],
+  "plugins": []
+}
